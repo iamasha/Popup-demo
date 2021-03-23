@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Page Banner</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style>
+		hmtl,
+		body{
+			margin:0;
+		}
+		.banner{
+			background: #1E5FA0;
+			max-width: 800px;
+  			
+		}
+		.banner--content{
+			padding: 16px;
+			max-width: 1000px;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			border-radius: 1 solid: 10px;
+		}
+		.banner--text{
+			flex-grow:1;
+			line-height: 1.4;
+			font-family: 'Quicksand', sans-serif;
+		}
+		.banner--close{
+			background: none;
+			border: none;
+			cursor: pointer;
+		}
+		.banner--text,
+		.banner--close > span{
+			color: #ffffff;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<div class="banner--content">
+			<div class ="banner--text">
+			<strong><b>Please Note:</b></strong> 
+			<ul>
+			<li>Orders that are made after 7 pm will be fullfilled or delivered the following day.</li>
+			<li>Deliveries are mainly to areas in and around kampala, uganda.</li>
+			<li>Any order for product or service delivery outside kampala will require further arrangements.</li>
+			</ul>
+			
+		</div>
+		<button class="banner--close" type="button">
+		<span class="material-icons">
+			close
+		</span>
+	</button>
+	</div>
+	<script>
+		document.querySelector(".banner--close").addEventListener("click", function(){
+		this.closest(".banner").style.display = "none";
+		});
+	</script>
+</body>
+</html>
